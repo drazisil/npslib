@@ -1,0 +1,38 @@
+# Ignore build artifacts
+*.o
+*.out
+*.exe
+*.a
+*.so
+*.dll
+*.lib
+
+# Ignore CMake build files
+/build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+build.ninja
+rules.ninja
+compile_commands.json
+CTestTestfile.cmake
+CPackConfig.cmake
+CPackSourceConfig.cmake
+DartConfiguration.tcl
+
+# Ignore IDE and editor files
+*.swp
+*.swo
+*.bak
+*.tmp
+*.log
+*.vscode/
+.idea/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore test output
+Testing/
