@@ -36,3 +36,4 @@ Thumbs.db
 
 # Ignore test output
 Testing/
+test_library
