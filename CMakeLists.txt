@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.10.0)
 project(NPSLib VERSION 0.1.0 LANGUAGES C CXX)
 
+# Add the NPS_Pack implementation file to the library
 add_library(NPSLib NPSLib.cpp)
 
 include(CTest)
@@ -14,5 +15,7 @@ include(CPack)
 add_executable(test_library test.cpp)
 target_link_libraries(test_library PRIVATE NPSLib)
 
-# Register the test executable with CTest
-add_test(NAME TestLibrary COMMAND test_library)
+# Register individual tests with CTest
+add_test(NAME TestSayHello COMMAND test_library test_say_hello)
+add_test(NAME TestPack COMMAND test_library test_pack)
+add_test(NAME TestUnpack COMMAND test_library test_unpack)
